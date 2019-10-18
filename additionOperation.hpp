@@ -15,4 +15,5 @@ public:
     }
     virtual ~additionOperation() {}
 };
+
 #endif //LAB5_ADDITIONOPERATION_HPP

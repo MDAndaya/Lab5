@@ -17,4 +17,5 @@ public:
     virtual ~subtractionOperation() {}
 
 };
+
 #endif //LAB5_SUBTRACTIONOPERATION_HPP

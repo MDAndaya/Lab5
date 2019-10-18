@@ -6,6 +6,7 @@
 #define LAB5_RPNCALCULATOR_HPP
 
 #include <stack>
+#include <string>
 #include "additionOperation.hpp"
 #include "subtractionOperation.hpp"
 #include "multiplicationOperation.hpp"
@@ -17,8 +18,12 @@ class rpnCalculator {
 private:
     int result;
     stack<int> stack;
+
     operation* operationType(char c);
-    void perform(operation& operation);
+    void perform(operation* operation);
+
+public:
+    int processForm(string formula);
 };
 
 #endif //LAB5_RPNCALCULATOR_HPP

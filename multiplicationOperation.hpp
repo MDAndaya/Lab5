@@ -17,4 +17,5 @@ public:
     virtual ~multiplicationOperation() {}
 
 };
+
 #endif //LAB5_MULTIPLICATIONOPERATION_HPP

@@ -1,29 +1,45 @@
 //
 // Created by MDand on 2019-10-18.
 //
+#include <sstream>
 #include "rpnCalculator.hpp"
 
 operation* rpnCalculator::operationType(char operation) {
     switch(operation) {
         case additionOperation::ADDITION_CODE:
-            additionOperation *a;
-            return a;
+            return new additionOperation;
             break;
         case subtractionOperation::SUBTRACTION_CODE:
-            subtractionOperation *s;
-            return s;
+            return new subtractionOperation;
             break;
         case multiplicationOperation::MULTIPLICATION_CODE:
-            multiplicationOperation *m;
-            return m;
+            return new multiplicationOperation;
             break;
         case divisionOperation::DIVISION_CODE:
-            divisionOperation *d;
-            return d;
+            return new divisionOperation;
             break;
     }
 }
 
-void rpnCalculator::perform(operation &operation) {
+void rpnCalculator::perform(operation* o) {
+    int a = stack.top();
+    stack.pop();
+    int b = stack.top();
+    stack.pop();
 
+    result = o->perform(b, a);
+    stack.push(result);
+}
+
+int rpnCalculator::processForm(string formula) {
+    istringstream iss(formula);
+    string operand;
+    while (iss >> operand) {
+        istringstream iss2(operand);
+        int i;
+        if (iss2 >> i)
+            stack.push(i);
+        else perform(operationType(operand[0]));
+    }
+    return result;
 }

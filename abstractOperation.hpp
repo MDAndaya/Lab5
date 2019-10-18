@@ -21,4 +21,5 @@ public:
     virtual ~abstractOperation() {}
 
 };
+
 #endif //LAB5_ABSTRACTOPERATION_HPP

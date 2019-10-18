@@ -17,4 +17,5 @@ public:
     virtual ~divisionOperation() {}
 
 };
+
 #endif //LAB5_DIVISIONOPERATION_HPP

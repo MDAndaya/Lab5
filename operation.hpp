@@ -13,4 +13,5 @@ public:
 
 
 };
+
 #endif //LAB5_OPERATION_HPP
