@@ -150,6 +150,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/Lab5.dir/build.make CMakeFiles/Lab5.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+rpnCalculator.o: rpnCalculator.cpp.o
+
+.PHONY : rpnCalculator.o
+
+# target to build an object file
+rpnCalculator.cpp.o:
+	$(MAKE) -f CMakeFiles/Lab5.dir/build.make CMakeFiles/Lab5.dir/rpnCalculator.cpp.o
+.PHONY : rpnCalculator.cpp.o
+
+rpnCalculator.i: rpnCalculator.cpp.i
+
+.PHONY : rpnCalculator.i
+
+# target to preprocess a source file
+rpnCalculator.cpp.i:
+	$(MAKE) -f CMakeFiles/Lab5.dir/build.make CMakeFiles/Lab5.dir/rpnCalculator.cpp.i
+.PHONY : rpnCalculator.cpp.i
+
+rpnCalculator.s: rpnCalculator.cpp.s
+
+.PHONY : rpnCalculator.s
+
+# target to generate assembly for a file
+rpnCalculator.cpp.s:
+	$(MAKE) -f CMakeFiles/Lab5.dir/build.make CMakeFiles/Lab5.dir/rpnCalculator.cpp.s
+.PHONY : rpnCalculator.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,6 +189,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... rpnCalculator.o"
+	@echo "... rpnCalculator.i"
+	@echo "... rpnCalculator.s"
 .PHONY : help
 
 
