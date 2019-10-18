@@ -10,7 +10,7 @@ class additionOperation: public abstractOperation {
 public:
     static const char ADDITION_CODE = '+';
     additionOperation(): abstractOperation(ADDITION_CODE) {}
-    virtual int perform(int a, int b) override {
+    int perform(int a, int b) override {
         return a + b;
     }
     virtual ~additionOperation() {}

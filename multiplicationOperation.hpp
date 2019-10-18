@@ -11,7 +11,7 @@ class multiplicationOperation: public abstractOperation {
 public:
     static const char MULTIPLICATION_CODE = '*';
     multiplicationOperation(): abstractOperation(MULTIPLICATION_CODE) {}
-    virtual int perform(int a, int b) override  {
+    int perform(int a, int b) override  {
         return a * b;
     }
     virtual ~multiplicationOperation() {}

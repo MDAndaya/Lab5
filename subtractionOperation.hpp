@@ -11,7 +11,7 @@ class subtractionOperation: public abstractOperation {
 public:
     static const char SUBTRACTION_CODE = '-';
     subtractionOperation(): abstractOperation(SUBTRACTION_CODE) {}
-    virtual int perform(int a, int b) override  {
+    int perform(int a, int b) override  {
         return a - b;
     }
     virtual ~subtractionOperation() {}
